@@ -15,6 +15,7 @@ def get_cursor(commit=False):
     Exemplo:
         with get_cursor() as cur:
             cur.execute("SELECT * FROM livros")
+            
     """
     conn = get_conn()
     cur = conn.cursor()
@@ -28,3 +29,14 @@ def get_cursor(commit=False):
     finally:
         cur.close()
         conn.close()
+
+
+"""
+conecxão com banco web
+
+"Driver={SQL Server Native Client 11.0};"
+                      "Server=server_name;"
+                      "Database=db_name;"
+                      "Trusted_Connection=yes;"
+                      
+                      """
